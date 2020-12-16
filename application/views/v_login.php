@@ -2,12 +2,10 @@
 	<head>
 		<title>Form Login</title>
 		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap.min.css">
-
 		<style>  
 			.loader-wrapper{
 			width: 100%;
-			height:100%;
-			position: absolute;
+      		
 			top:0;
 			left:0;
 			display: flex;
@@ -24,9 +22,9 @@
 
 	<body>
 		
-	<div class="container ">
-		<div class="card loader-wrapper" >
-			<div class="card-header mt-6">
+	<div class="container loader-wrapper">
+		<div class="card mt-5" style="width: 35rem;">
+			<div class="card-header text-center">
 				Form Login
 			</div>
 		
@@ -57,9 +55,10 @@
 						<label for="password">Password</label>
 						<input type="password" class="form-control" name="password" id="password" placeholder="Password">
 					</div>
+					<div class="form-group text-center">
                     <button type="submit" id="btnlogin" class="btn btn-primary">Login</button>
                     <a href="<?php echo base_url('register');?>">Need an account? Sign up!</a></div>
-                    <!-- <button type="submit" class="btn btn-primary">Register</button> -->
+                    </div>
 				</form>
 			</div>
 		</div>
