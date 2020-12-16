@@ -9,15 +9,15 @@
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
-        <div class="carousel-inner col-lg-8">
-          <div class="carousel-item img-responsive center-block active">
+        <div class="carousel-inner col-lg-8 mx-auto">
+          <div class="carousel-item active">
             <img src="http://placehold.it/320x150" class="center-block w-100"  alt="">
           </div>
-          <div class="carousel-item img-responsive center-block">
-            <img src="http://placehold.it/320x150" class="center-block w-100" alt="">
+          <div class="carousel-item">
+            <img src="http://placehold.it/300x150" class="center-block w-100" alt="">
           </div>
           <div class="carousel-item">
-            <img src="http://placehold.it/320x150" class="center-block w-100" alt="">
+            <img src="http://placehold.it/330x150" class="center-block w-100" alt="">
           </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
