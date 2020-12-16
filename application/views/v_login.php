@@ -5,7 +5,6 @@
 		<style>  
 			.loader-wrapper{
 			width: 100%;
-      		
 			top:0;
 			left:0;
 			display: flex;
@@ -20,12 +19,11 @@
 		</style>
 	</head>
 
-	<body>
-		
+	<body>	
 	<div class="container loader-wrapper">
 		<div class="card mt-5" style="width: 35rem;">
 			<div class="card-header text-center">
-				Form Login
+				<h5>Form Login Web</h5>
 			</div>
 		
 			<div class="card-body">
@@ -56,8 +54,8 @@
 						<input type="password" class="form-control" name="password" id="password" placeholder="Password">
 					</div>
 					<div class="form-group text-center">
-                    <button type="submit" id="btnlogin" class="btn btn-primary">Login</button>
-                    <a href="<?php echo base_url('register');?>">Need an account? Sign up!</a></div>
+						<button type="submit" id="btnlogin" class="btn btn-primary">Login</button>
+						<a href="<?php echo base_url('register');?>">Need an account? Sign up!</a></div>
                     </div>
 				</form>
 			</div>
