@@ -73,16 +73,17 @@
                     </label>
                   </div>
                   </div>
-                </div>
+                  </div>
                   <div class="center">
                     <button class="btn main_bt">Login</button>
                   </div>
-                  </fieldset>
+                  </fieldset>                  
                 </form>
                 </div>
                   <div class="center">
-                    <button class="btn">
-                      <a href="<?= base_url('admin/Login/daftar') ?>"> Daftar Baru </a></button>
+                    <button class="btn main_bt">
+                      <a href="<?= base_url('daftar') ?>">Daftar Baru</a>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -102,7 +103,7 @@
 
 <!-- end section -->
 <!-- footer -->
- <?php $this->load->view('admin/_partials/footer') ?>
+ <!-- <?php $this->load->view('admin/_partials/footer') ?> -->
 <!-- end footer -->
 <!-- js section -->
 <script src="<?php echo base_url('js/jquery.min.js') ?>"></script>
