@@ -44,14 +44,16 @@
 <!-- Section -->
 <div class="section padding_layout_1">
   <div class="container">
-    <div class="row">
-      <div class="col-md-9">
-        <div class="row" style="margin-bottom: 30px;">
+    <div class="row center-block">
+    <div class="col-lg-2 col-md-0 col-sm-4 col-xs-6">
+    </div>
+      <div class="col-lg-8 col-md-4 col-sm-12 col-xs-12">
+        <div class="row" style="margin-bottom: 30px; center-block">
           <div class="col-md-12">
-            <div class="full margin_bottom_30">
+            <div class="full margin_bottom_30 ">
               <div class="accordion border_circle">
                 <div class="bs-example">
-                  <div class="panel-group" id="accordion" style="margin-top: 0;">
+                  <div class="panel-group " id="accordion" style="margin-top: 0;">
                     <div class="panel panel-default">
                       <div class="panel-heading">
                         <p class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">1. When can we get started?<i class="fa fa-angle-down"></i></a> </p>
