@@ -301,7 +301,7 @@
                       <div class="row form-group">
                         <div class="field col-lg-12 col-md-12 col-sm-12 col-xs-12">
                           <label for="ttl">Prestasi Akademik</label>
-                          <select multiple class="form-control" id="exampleFormControlSelect2">
+                          <select multiple type="text" class="form-control" id="exampleFormControlSelect2">
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>

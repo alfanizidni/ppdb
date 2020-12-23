@@ -43,13 +43,12 @@
 
 <!-- Section -->
 <div class="section padding_layout_1">
-  <div class="container col-md-2">
-  <div class="row" style="margin-upside: 10px;">
+  <div class="container">
+  <div class="row">
       <div class="col-md-12">
         <div class="full">
           <div class="main_heading text_align_center">
             <h2>Tata Cara Mendaftar</h2>
-            <p class="large">Dibawah ini merupakan informasi yang perlu diperhatikan saat melakukan pendaftaran</p>
           </div>
         </div>
       </div>
