@@ -43,10 +43,19 @@
 
 <!-- Section -->
 <div class="section padding_layout_1">
-  <div class="container">
-    <div class="row center-block">
-    <div class="col-lg-2 col-md-0 col-sm-4 col-xs-6">
+  <div class="container col-md-2">
+  <div class="row" style="margin-upside: 10px;">
+      <div class="col-md-12">
+        <div class="full">
+          <div class="main_heading text_align_center">
+            <h2>Tata Cara Mendaftar</h2>
+            <p class="large">Dibawah ini merupakan informasi yang perlu diperhatikan saat melakukan pendaftaran</p>
+          </div>
+        </div>
+      </div>
     </div>
+    <div class="row">
+    <div class="center">
       <div class="col-lg-8 col-md-4 col-sm-12 col-xs-12">
         <div class="row" style="margin-bottom: 30px; center-block">
           <div class="col-md-12">
@@ -108,6 +117,10 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+      <div class="center">
+        <p><a class="btn main_bt" href="<?= base_url('daftar') ?>">Daftar Sekarang</a></p>
       </div>
     </div>
   </div>

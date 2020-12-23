@@ -45,6 +45,7 @@
 <div class="section">
   <div class="container">
     <div class="row">
+            <div class="center">  
       <div class="row">
         <div class="full">
           <div class="d-flex h-100 justify-content-center align-items-center">
@@ -55,9 +56,11 @@
                     <h2>Daftar Peserta Didik Baru</h2>
                   </div>
                 </div>
+                
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 appointment_form">
+
                   <div class="form_section">
-                    <form class="form_contant" action="index.html" style="padding-left: 200px; padding-right:200px; width:100%; display:block;">
+                    <form class="form_contant" action="index.html" style="padding-left: 50px; padding-right:50px; width:100%; display:block;">
                       <div class="row">
                         <div class="field col-lg-6 col-md-6 col-sm-6 col-xs-6">
                           <label for="ttl">Nama Lengkap</label>
@@ -73,11 +76,11 @@
                       </div>
                       <div class="row">
                         <div class="field col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                          <label for="ttl">Email</label>
+                          <label for="ttl">NISN</label>
                           <input class="field_custom" placeholder="Email" type="text" required>
                         </div>
                         <div class="field col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                          <label for="ttl">Telepon</label>
+                          <label for="ttl">Jenis Kelamin</label>
                           <input class="field_custom" placeholder="Telepon" type="text" required>
                         </div>
                       </div>
@@ -91,15 +94,7 @@
                           <input class="field_custom" placeholder="Konfirmasi Kata Sandi" type="password" required>
                         </div>
                       </div>
-                      <!-- <div class="col">
-                          <div class="form-group">
-                            <div class="checkbox">
-                              <label>
-                                <h3 class="small text-center">Silahkan masukan Username dan Password yang valid</h3>
-                              </label>
-                            </div>
-                          </div>
-                        </div> -->
+                      
                       <div class="center">
                         <button class="btn main_bt">Daftar</button>
                       </div>
@@ -107,6 +102,7 @@
                   </form>
                 </div>
               </div>
+            </div>
             </div>
           </div>
         </div>
