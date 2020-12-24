@@ -54,13 +54,13 @@
                   <a href="<?= base_url('admin') ?>" class="active">Beranda</a>
                 </li>
                 <li><a href="<?= base_url('prosedur') ?>">Prosedur</a></li>
-                <li> <a href="#">Informasi</a>
-                  <ul>
+                <li> <a href="<?= base_url('pendaftaran') ?>">Pendaftaran</a>
+                  <!-- <ul>
                     <li><a href="#">Berita</a></li>
                     <li><a href="#">Pemberitahuan</a></li>
-                  </ul>
+                  </ul> -->
                 </li>
-                <li> <a href="<?= base_url("admin/login") ?>" >Login/Daftar</a>
+                <li> <a href="<?= base_url("login") ?>" >Login/Daftar</a>
                 </li>
               </ul>
             </div>

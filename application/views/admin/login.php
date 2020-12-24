@@ -36,12 +36,8 @@
       <![endif]-->
 </head>
 
-<!-- Header -->
-<?php $this->load->view('admin/_partials/header') ?>
-<!-- End Header -->
 
 <!-- end inner page banner -->
-<div class="card mx-auto">
 <div class="section padding_layout_1">
   <div class="container">
     <div class="row">
@@ -57,13 +53,27 @@
             <div class="card-body">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 appointment_form">
               <div class="form_section">
-                <form class="form_contant" action="index.html">
+              <?php
+                $errors = $this->session->flashdata('errors');
+                if(!empty($errors)){
+                ?>
+                <div class="row">
+                    <div class="col-md-12">
+                    <div class="alert alert-danger text-center">
+                        <?php foreach($errors as $key=>$error){ ?>
+                        <?php echo "$error<br>"; ?>
+                        <?php } ?>
+                    </div>
+                    </div>
+                </div>
+            <?php } ?>
+                <form class="form_contant" action="<?php echo base_url('admin/login/proses_login'); ?>" method="post">
                   <fieldset class="row">
                   <div class="field col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <input class="field_custom" placeholder="Username" type="text" required>
+                    <input class="field_custom" placeholder="Email" type="email" name="email" required>
                   </div>
                   <div class="field col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <input class="field_custom" placeholder="Password" type="text" required>
+                    <input class="field_custom" placeholder="Password" type="password" name="password" required>
                   </div>
                   <div class="col">
                   <div class="form-group">
@@ -80,10 +90,8 @@
                   </fieldset>                  
                 </form>
                 </div>
-                  <div class="center">
-                    <button class="btn main_bt">
-                      <a href="<?= base_url('daftar') ?>">Daftar Baru</a>
-                    </button>
+                  <div class="center">                    
+                      <a class="btn dark_gray_bt" href="<?= base_url('register') ?>">Daftar Baru</a>                    
                   </div>
                 </div>
               </div>
@@ -94,16 +102,10 @@
     </div>
   </div>
 </div>
-</div>
-</div>
 <!-- section -->
 
 
 
-
-<!-- end section -->
-<!-- footer -->
- <!-- <?php $this->load->view('admin/_partials/footer') ?> -->
 <!-- end footer -->
 <!-- js section -->
 <script src="<?php echo base_url('js/jquery.min.js') ?>"></script>
