@@ -14,13 +14,7 @@ class Login_model extends CI_Model{
         $this->db->insert('rb_psb_akun',$data_user);
     }
     
-    public function cek_login($email)
-    {
-        $hasil = $this->db->where('email', $email)->limit(1)->get('rb_psb_akun');
-        if($hasil->num_rows() > 0){
-            return $hasil->row();
-        } else {
-            return array();
-        }
-    }
+    function cek_login($table,$where){		
+		return $this->db->get_where($table,$where);
+	}
 }
