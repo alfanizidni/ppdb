@@ -37,10 +37,10 @@ class Login extends CI_Controller {
                 redirect('admin/overview');
 
             }else {
-                echo "password salah";
+                echo '<script>alert("Email atau Password yang Anda masukan salah.");window.location.href="'.base_url('login').'";</script>';
             }
         } else{
-            echo "Akun Belum Terdaftar";
+            echo '<script>alert("Email atau Password yang Anda masukan Tidak Terdaftar.");window.location.href="'.base_url('login').'";</script>';
         }
         
         // $this->load->library('form_validation');
@@ -81,7 +81,7 @@ class Login extends CI_Controller {
                 //     redirect('/overview');
                         
                 // } else {
-                //     echo '<script>alert("Username atau Password yang Anda masukan salah.");window.location.href="'.base_url('admin/login').'";</script>';
+                //     echo '<script>alert("Email atau Password yang Anda masukan salah.");window.location.href="'.base_url('admin/login').'";</script>';
                 // }
             
         
