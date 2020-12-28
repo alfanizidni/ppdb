@@ -382,28 +382,22 @@
                           <button type="submit" class="btn sqaure_bt" style="margin-top: 25px;">Unggah Foto</button>
                         </div>
                       </div>
-                      <div class="row form-group">
+                      <div class="row">
                         <div class="field col-lg-12 col-md-12 col-sm-12 col-xs-12">
                           <label for="ttl">Prestasi Akademik</label>
-                          <select multiple type="text" class="form-control" id="exampleFormControlSelect2">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                          </select>
+                          <textarea class="field_custom" placeholder="1. 
+2.
+3.
+dst" type="text" required></textarea>
                         </div>
                       </div>
-                      <div class="row form-group">
+                      <div class="row">
                         <div class="field col-lg-12 col-md-12 col-sm-12 col-xs-12">
                           <label for="ttl">Prestasi Non-Akademik</label>
-                          <select multiple class="form-control" id="exampleFormControlSelect2">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                          </select>
+                          <textarea class="field_custom" placeholder="1. 
+2.
+3.
+dst" type="text" required></textarea>
                         </div>
                       </div>
                       <br/>
