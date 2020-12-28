@@ -1,4 +1,4 @@
-<!-- <footer id="myFooter">
+<footer id="myFooter">
         <div class="container col-sm-12">
             <div class="row">
                 <div class="col-sm-4">
@@ -43,18 +43,19 @@
                   </div>
                 </div>
             </div>
-            
-            <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 1000px">
-              <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <div class="center">
+              <div id="map-container-google-1" class="map-container" style="height: 200px">
+                <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
             </div>
         </div>
-</footer> -->
+</footer>
 
             <!-- <iframe id="map-container" frameborder="0" style="border:0" class="map_section">
               <div id="map"></div>
             </iframe> -->
         
-<footer class="footer_style_2" style="height: 200px">
+<!-- <footer class="footer_style_2" style="height: 200px">
   <div class="container-fuild" >
     <div class="row">
       
@@ -110,7 +111,7 @@
       </div>
     </div>
   </div>
-</footer>
+</footer> -->
 <!-- end footer -->
 <!-- map js -->
 <script>
