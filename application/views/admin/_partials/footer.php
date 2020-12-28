@@ -1,9 +1,67 @@
-<footer class="footer_style_2">
-  <div class="container-fuild">
+<!-- <footer id="myFooter">
+        <div class="container col-sm-12">
+            <div class="row">
+                <div class="col-sm-4">
+                <div class="footer-widgets">
+                         <div class="widgets-title">
+                             <h2>Sekolah</h2>
+                         </div>
+                         <address>
+                             <p>Nama Lengkap Sekolah,<br> Integer nisl dui, ABC 12000</p>
+                         </address>                              
+                         <div class="copyright-text"> 
+                              <p>Copyright &copy; 2019 Company Name</p>
+                              <p>Design: TemplateMo</p>
+                           <ul class="social_icons">
+                           <li class="social-icon fb"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                           <li class="social-icon tw"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                           <li class="social-icon gp"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                         </ul>
+                         </div>
+                      </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="footer-info">
+                      <div class="section-title">
+                        <h2>Alamat Sekolah</h2>
+                      </div>
+                      <address>
+                        <p>Alamat Lengkap Sekolah</p>
+                        <p><a href="mailto:youremail.co">Telp./Fax.:@@@</a></p>
+                      </address>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="footer-info">
+                    <div class="section-title">
+                      <h2>Info Kontak Utama</h2>
+                    </div>
+                    <address>
+                      <p>+65 2244 1100, +66 1800 1100</p>
+                      <p><a href="mailto:youremail.co">hello@youremail.co</a></p>
+                    </address>
+                  </div>
+                </div>
+            </div>
+            
+            <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 1000px">
+              <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+</footer> -->
+
+            <!-- <iframe id="map-container" frameborder="0" style="border:0" class="map_section">
+              <div id="map"></div>
+            </iframe> -->
+        
+<footer class="footer_style_2" style="height: 200px">
+  <div class="container-fuild" >
     <div class="row">
-      <div class="map_section">
-        <div id="map"></div>
-      </div>
+      
+        <div class="map_section">
+          <div id="map" ></div>
+        </div>
+      
       <div class="footer_blog">
         <div class="row">
         <div class="col-md-4">
@@ -61,6 +119,7 @@
          function initMap() {
            var map = new google.maps.Map(document.getElementById('map'), {
              zoom: 11,
+             height: '200px',
              center: {lat: 40.645037, lng: -73.880224},
          styles: [
                   {

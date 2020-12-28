@@ -74,7 +74,7 @@
 <div class="section">
   <div class="container">
     <div class="row">
-            <div class="center">  
+     <div class="center">  
       <div class="row">
         <div class="full">
           <div class="d-flex h-100 justify-content-center align-items-center">
@@ -110,17 +110,33 @@
                         </div>
                         <div class="field col-lg-6 col-md-6 col-sm-6 col-xs-6">
                           <label for="ttl">Jenis Kelamin</label>
-                          <input class="field_custom" placeholder="Laki-laki/Perempuan" type="options" required>
+                          <br/>
+                          <div class="form-group" required>
+                            <select class="form-control" style="margin-top: 8px;" id="exampleFormControlSelect1" required>
+                              <option>Laki-laki</option>
+                              <option>Perempuan</option>
+                            </select>
+                          </div>
                         </div>
                       </div>
                       <div class="row">
-                        <div class="field col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <div class="field col-lg-4 col-md-4 col-sm-4 col-xs-4 ">
                           <label for="ttl">Agama</label>
-                          <input class="field_custom" placeholder="Agama" type="text" required>
+                          <br/>
+                          <div class="form-group" required>
+                            <select class="form-control" style="margin-top: 8px;" id="exampleFormControlSelect1" required>
+                              <option>Islam</option>
+                              <option>Protestan</option>
+                              <option>Katolik</option>
+                              <option>Hindu</option>
+                              <option>Budha</option>
+                              <option>Konghucu</option>
+                            </select>
+                          </div>
                         </div>
                         <div class="field col-lg-4 col-md-4 col-sm-4 col-xs-4">
                           <label for="ttl">Anak ke-</label>
-                          <input class="field_custom" placeholder="Anak Ke-" type="text" id="ttl" required>
+                          <input class="field_custom" placeholder="Anak Ke-" type="number" id="ttl" required>
                         </div>
                         <div class="field col-lg-4 col-md-4 col-sm-4 col-xs-4">
                           <label for="ttl">Jumlah Saudara</label>
@@ -130,11 +146,20 @@
                       <div class="row">
                         <div class="field col-lg-4 col-md-4 col-sm-4 col-xs-4">
                           <label for="ttl">Nomor Telepon</label>
-                          <input class="field_custom" placeholder="Telepon" type="number" required>
+                          <input class="field_custom" placeholder="Telepon" type="dropdown" required>
                         </div>
                         <div class="field col-lg-2 col-md-2 col-sm-2 col-xs-2">
                           <label for="ttl">Gol. Darah</label>
-                          <input class="field_custom" placeholder="Gol. Darah" type="text" id="ttl" required>
+                          <br/>
+                          <div class="form-group" required>
+                            <select class="form-control" style="margin-top: 8px;" id="exampleFormControlSelect1" required>
+                              <option>A</option>
+                              <option>B</option>
+                              <option>O</option>
+                              <option>AB</option>
+                              <option>-</option>
+                            </select>
+                          </div>
                         </div>
                         <div class="field col-lg-3 col-md-3 col-sm-3 col-xs-3">
                           <label for="ttl">Berat Badan</label>
@@ -171,7 +196,17 @@
                       <div class="row">
                         <div class="field col-lg-6 col-md-6 col-sm-6 col-xs-6">
                           <label for="ttl">Agama Ayah</label>
-                          <input class="field_custom" placeholder="Agama" type="text" required>
+                          <br/>
+                          <div class="form-group" required>
+                            <select class="form-control" style="margin-top: 8px;" id="exampleFormControlSelect1" required>
+                              <option>Islam</option>
+                              <option>Protestan</option>
+                              <option>Katolik</option>
+                              <option>Hindu</option>
+                              <option>Budha</option>
+                              <option>Konghucu</option>
+                            </select>
+                          </div>
                         </div>
                         <div class="field col-lg-3 col-md-3 col-sm-3 col-xs-3">
                           <label for="ttl">Tempat/Tanggal Lahir Ayah</label>
@@ -223,7 +258,17 @@
                       <div class="row">
                         <div class="field col-lg-6 col-md-6 col-sm-6 col-xs-6">
                           <label for="ttl">Agama Ibu</label>
-                          <input class="field_custom" placeholder="Agama" type="text" required>
+                          <br/>
+                          <div class="form-group" required>
+                            <select class="form-control" style="margin-top: 8px;" id="exampleFormControlSelect1" required>
+                              <option>Islam</option>
+                              <option>Protestan</option>
+                              <option>Katolik</option>
+                              <option>Hindu</option>
+                              <option>Budha</option>
+                              <option>Konghucu</option>
+                            </select>
+                          </div>
                         </div>
                         <div class="field col-lg-3 col-md-3 col-sm-3 col-xs-3">
                           <label for="ttl">Tempat/Tanggal Lahir Ibu</label>
@@ -275,7 +320,17 @@
                       <div class="row">
                         <div class="field col-lg-6 col-md-6 col-sm-6 col-xs-6">
                           <label for="ttl">Agama Wali</label>
-                          <input class="field_custom" placeholder="Agama" type="text" required>
+                          <br/>
+                          <div class="form-group" required>
+                            <select class="form-control" style="margin-top: 8px;" id="exampleFormControlSelect1" required>
+                              <option>Islam</option>
+                              <option>Protestan</option>
+                              <option>Katolik</option>
+                              <option>Hindu</option>
+                              <option>Budha</option>
+                              <option>Konghucu</option>
+                            </select>
+                          </div>
                         </div>
                         <div class="field col-lg-3 col-md-3 col-sm-3 col-xs-3">
                           <label for="ttl">Tempat/Tanggal Lahir Wali</label>
