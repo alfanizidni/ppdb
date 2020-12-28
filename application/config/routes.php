@@ -53,9 +53,9 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['admin'] = 'admin/overview';
-$route['prosedur'] = 'admin/overview/prosedur';
 $route['login'] = 'admin/login/login';
 $route['register'] = 'admin/login/register';
+$route['admin'] = 'admin/overview';
+$route['prosedur'] = 'admin/overview/prosedur';
 
 $route['pendaftaran'] = 'admin/pendaftaran';

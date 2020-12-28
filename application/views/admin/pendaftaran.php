@@ -41,6 +41,35 @@
 <?php $this->load->view('admin/_partials/header') ?>
 <!-- End Header -->
 
+<!-- header bottom -->
+<div class="header_bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
+          <!-- logo start -->
+          <div class="logo"> <a href="<?= base_url('admin') ?>">Logo Sekolah</a> </div>
+          <!-- logo end -->
+        </div>         
+        <div class="col-lg-9 col-md-6 col-sm-6 col-xs-6">
+          <!-- menu start -->
+          <div class="menu_side">
+            <div id="navbar_menu">
+              <ul class="first-ul">
+                <li><a href="<?= base_url('admin') ?>">Beranda</a></li>
+                <li><a href="<?= base_url('prosedur') ?>">Prosedur</a></li>
+                <li> <a href="<?= base_url('pendaftaran') ?>" class="active">Pendaftaran</a></li>
+                <li> <a href="<?= base_url("login") ?>" >Logout</a></li>
+              </ul>
+            </div>            
+          </div>
+         <!-- menu end -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- header bottom end -->
+</header>
+
 <!-- end inner page banner -->
 <div class="section">
   <div class="container">
@@ -77,7 +106,7 @@
                       <div class="row">
                         <div class="field col-lg-6 col-md-6 col-sm-6 col-xs-6">
                           <label for="ttl">NISN</label>
-                          <input class="field_custom" placeholder="Email" type="text" required>
+                          <input class="field_custom" placeholder="NISN" type="text" required>
                         </div>
                         <div class="field col-lg-6 col-md-6 col-sm-6 col-xs-6">
                           <label for="ttl">Jenis Kelamin</label>
@@ -101,7 +130,7 @@
                       <div class="row">
                         <div class="field col-lg-4 col-md-4 col-sm-4 col-xs-4">
                           <label for="ttl">Nomor Telepon</label>
-                          <input class="field_custom" placeholder="Telepon" type="text" required>
+                          <input class="field_custom" placeholder="Telepon" type="number" required>
                         </div>
                         <div class="field col-lg-2 col-md-2 col-sm-2 col-xs-2">
                           <label for="ttl">Gol. Darah</label>
@@ -109,25 +138,25 @@
                         </div>
                         <div class="field col-lg-3 col-md-3 col-sm-3 col-xs-3">
                           <label for="ttl">Berat Badan</label>
-                          <input class="field_custom" placeholder="... Kg" type="text" id="ttl" required>
+                          <input class="field_custom" placeholder="... Kg" type="number" id="ttl" required>
                         </div>
                         <div class="field col-lg-3 col-md-3 col-sm-3 col-xs-3">
                           <label for="ttl">Tinggi Badan</label>
-                          <input class="field_custom" placeholder="... cm" type="text" required>
+                          <input class="field_custom" placeholder="... cm" type="number" required>
                         </div>
                       </div>
                       <div class="row">
                         <div class="field col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <label for="ttl">Sekolah Asal</label>
+                            <input class="field_custom" placeholder="Sekolah Asal" type="password" required>
+                        </div>
+                        <div class="field col-lg-6 col-md-12 col-sm-12 col-xs-12">
                           <label for="ttl">Alamat</label>
-                          <input class="field_custom" placeholder="Alamat Lengkap" type="password" required>
-                        </div>
-                        <div class="field col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                          <label for="ttl">Sekolah Asal</label>
-                          <input class="field_custom" placeholder="Sekolah Asal" type="password" required>
-                        </div>
-                        <div class="field col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                          <textarea class="field_custom" placeholder="Alamat Lengkap" type="text" ></textarea>
+                        </div>                        
+                        <div class="field col-lg-6 col-md-12 col-sm-12 col-xs-12">
                           <label for="ttl">Alamat Sekolah Asal</label>
-                          <input class="field_custom" placeholder="Alamat Sekolah Asal" type="password" required>
+                          <textarea class="field_custom" placeholder="Alamat Sekolah Asal" type="password"></textarea>
                         </div>
                       </div>
                       <br/>
@@ -162,25 +191,25 @@
                           <input class="field_custom" placeholder="Pekerjaan Ayah" type="text" id="ttl" required>
                         </div>
                       </div>
-                      <div class="row">
-                        <div class="field col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                          <label for="ttl">Alamat Rumah Ayah</label>
-                          <input class="field_custom" placeholder="Alamat Lengkap" type="text" required>
+                      <div class="row">                        
+                        <div class="field col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                          <label for="ttl">Telepon Kantor Ayah</label>
+                          <input class="field_custom" placeholder="Telepon Kantor Ayah" type="number" id="ttl" required>
                         </div>
-                        <div class="field col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <div class="field col-lg-6 col-md-6 col-sm-6 col-xs-6">
                           <label for="ttl">Telepon Ayah</label>
-                          <input class="field_custom" placeholder="Nomor Telepon Ayah" type="text" id="ttl" required>
+                          <input class="field_custom" placeholder="Nomor Telepon Ayah" type="number" id="ttl" required>
                         </div>
                       </div>
                       <div class="row">
-                        <div class="field col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                        <div class="field col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <label for="ttl">Alamat Rumah Ayah</label>
+                            <textarea class="field_custom" placeholder="Alamat Lengkap" type="text" required></textarea>
+                        </div>
+                        <div class="field col-lg-6 col-md-6 col-sm-6 col-xs-6">
                           <label for="ttl">Alamat Kantor Ayah</label>
-                          <input class="field_custom" placeholder="Alamat Lengkap" type="text" required>
-                        </div>
-                        <div class="field col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                          <label for="ttl">Telepon Kantor Ayah</label>
-                          <input class="field_custom" placeholder="Telepon Kantor Ayah" type="text" id="ttl" required>
-                        </div>
+                          <textarea class="field_custom" placeholder="Alamat Lengkap" type="text" required></textarea>
+                        </div>                        
                       </div>
                       <br/>
                       <hr/>
@@ -214,25 +243,25 @@
                           <input class="field_custom" placeholder="Pekerjaan Ibu" type="text" id="ttl" required>
                         </div>
                       </div>
-                      <div class="row">
-                        <div class="field col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                          <label for="ttl">Alamat Rumah Ibu</label>
-                          <input class="field_custom" placeholder="Alamat Lengkap" type="text" required>
+                      <div class="row">                        
+                        <div class="field col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                          <label for="ttl">Telepon Kantor Ibu</label>
+                          <input class="field_custom" placeholder="Telepon Kantor Ibu" type="number" id="ttl" required>
                         </div>
-                        <div class="field col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <div class="field col-lg-6 col-md-6 col-sm-6 col-xs-6">
                           <label for="ttl">Telepon Ibu</label>
-                          <input class="field_custom" placeholder="Nomor Telepon Ibu" type="text" id="ttl" required>
+                          <input class="field_custom" placeholder="Nomor Telepon Ibu" type="number" id="ttl" required>
                         </div>
                       </div>
                       <div class="row">
-                        <div class="field col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                        <div class="field col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <label for="ttl">Alamat Rumah Ibu</label>
+                            <textarea class="field_custom" placeholder="Alamat Lengkap" type="text" required></textarea>
+                        </div>
+                        <div class="field col-lg-6 col-md-6 col-sm-6 col-xs-6">
                           <label for="ttl">Alamat Kantor Ibu</label>
-                          <input class="field_custom" placeholder="Alamat Lengkap" type="text" required>
-                        </div>
-                        <div class="field col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                          <label for="ttl">Telepon Kantor Ibu</label>
-                          <input class="field_custom" placeholder="Telepon Kantor Ibu" type="text" id="ttl" required>
-                        </div>
+                          <textarea class="field_custom" placeholder="Alamat Lengkap" type="text" required></textarea>
+                        </div>                        
                       </div>
                       <br/>
                       <hr/>
@@ -266,25 +295,25 @@
                           <input class="field_custom" placeholder="Pekerjaan Wali" type="text" id="ttl" required>
                         </div>
                       </div>
-                      <div class="row">
-                        <div class="field col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                          <label for="ttl">Alamat Rumah Wali</label>
-                          <input class="field_custom" placeholder="Alamat Lengkap" type="text" required>
+                      <div class="row">                        
+                        <div class="field col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                          <label for="ttl">Telepon Kantor Wali</label>
+                          <input class="field_custom" placeholder="Telepon Kantor Wali" type="number" id="ttl" required>
                         </div>
-                        <div class="field col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <div class="field col-lg-6 col-md-6 col-sm-6 col-xs-6">
                           <label for="ttl">Telepon Wali</label>
-                          <input class="field_custom" placeholder="Nomor Telepon Wali" type="text" id="ttl" required>
+                          <input class="field_custom" placeholder="Nomor Telepon Wali" type="number" id="ttl" required>
                         </div>
                       </div>
                       <div class="row">
-                        <div class="field col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                        <div class="field col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <label for="ttl">Alamat Rumah Wali</label>
+                            <textarea class="field_custom" placeholder="Alamat Lengkap" type="text" required></textarea>
+                        </div>
+                        <div class="field col-lg-6 col-md-6 col-sm-6 col-xs-6">
                           <label for="ttl">Alamat Kantor Wali</label>
-                          <input class="field_custom" placeholder="Alamat Lengkap" type="text" required>
-                        </div>
-                        <div class="field col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                          <label for="ttl">Telepon Kantor Wali</label>
-                          <input class="field_custom" placeholder="Telepon Kantor Wali" type="text" id="ttl" required>
-                        </div>
+                          <textarea class="field_custom" placeholder="Alamat Lengkap" type="text" required></textarea>
+                        </div>                        
                       </div>
                       <br/>
                       <hr/>

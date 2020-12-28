@@ -40,6 +40,35 @@
 <?php $this->load->view('admin/_partials/header') ?>
 <!-- End Header -->
 
+<!-- header bottom -->
+<div class="header_bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
+          <!-- logo start -->
+          <div class="logo"> <a href="<?= base_url('admin') ?>">Logo Sekolah</a> </div>
+          <!-- logo end -->
+        </div>        
+        <div class="col-lg-9 col-md-6 col-sm-6 col-xs-6">
+          <!-- menu start -->
+          <div class="menu_side">
+            <div id="navbar_menu">
+              <ul class="first-ul">                
+                <li><a href="<?= base_url('admin') ?>" class="active">Beranda</a></li>
+                <li><a href="<?= base_url('prosedur') ?>">Prosedur</a></li>
+                <li> <a href="<?= base_url('pendaftaran') ?>">Pendaftaran</a></li>
+                <li> <a href="<?= base_url("login") ?>" >Logout</a></li>
+              </ul>
+            </div>            
+          </div>
+         <!-- menu end -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- header bottom end -->
+</header>
+
 <!-- section -->
 <div id="slider" class="section main_slider">
   <div class="container-fuild">

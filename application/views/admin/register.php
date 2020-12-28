@@ -39,19 +39,18 @@
 
 
 <!-- end inner page banner -->
+<div class="section padding_layout_1">
 <div class="section">
   <div class="container">
     <div class="row">
       <div class="center">    
         <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
-          <div class="d-flex h-100 justify-content-center align-items-center">            
-            
-              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="main_heading text_align_center">
-                  <h2>Register</h2>
-                </div>                               
-                
-                  <div class="form_section">                   
+          <div class="d-flex h-100 justify-content-center align-items-center">    
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div class="main_heading text_align_center">
+                <h2>Register</h2>
+              </div>        
+                 <div class="form_section">                   
                     <form class="form_contant" action="<?php echo base_url('admin/login/proses_register'); ?>" method="post" style="padding-left: 50px; padding-right:50px; width:100%; display:block;">
                       <div class="row">
                         <div class="field col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -84,7 +83,7 @@
                   </div>
                 </div>
               </div>            
-            
+            </div>
           </div>        
         </div>
       </div>
