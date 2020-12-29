@@ -1,6 +1,7 @@
-<footer id="myFooter">
-        <div class="container col-sm-12">
-            <div class="row">
+<footer id="footer_style_2" style="padding-top: 0; padding-bottom: 5px" >
+        <div class="container">
+            <div class="row" style="padding-top: 5px; padding-bottom: 5px">
+              <div class="center">
                 <div class="col-sm-4">
                 <div class="footer-widgets">
                          <div class="widgets-title">
@@ -42,10 +43,11 @@
                     </address>
                   </div>
                 </div>
+              </div>
             </div>
             <div class="center">
-              <div id="map-container-google-1" class="map-container" style="height: 200px">
-                <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
+              <div id="mapid" class="map-container" style="padding-top: 5px">
+                <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0; width:1500px; height:300px" allowfullscreen></iframe>
               </div>
             </div>
         </div>
@@ -117,6 +119,14 @@
 <script>
          // This example adds a marker to indicate the position of Bondi Beach in Sydney,
          // Australia.
+        //  var map = L.map('map').setView([51.505, -0.09], 13);
+        //   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        //       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        //   }).addTo(map);
+
+        //   L.marker([51.5, -0.09]).addTo(map)
+        //       .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+        //       .openPopup();
          function initMap() {
            var map = new google.maps.Map(document.getElementById('map'), {
              zoom: 11,

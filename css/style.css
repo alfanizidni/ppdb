@@ -3604,6 +3604,10 @@ footer ul.social_icons {
 	width: 50%;
 }
 
+#mapid { 
+	height: 180px; 
+}
+
 #map {
 	height: 100%;
 	min-height: 200px;

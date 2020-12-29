@@ -496,7 +496,9 @@
 <!-- end section -->
 
 <!-- footer -->
+<div style="height: 100px">
  <?php $this->load->view('admin/_partials/footer') ?>
+</div>
 <!-- end footer -->
 <!-- js section -->
 <script src="<?php echo base_url('js/jquery.min.js') ?>"></script>
