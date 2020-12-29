@@ -85,36 +85,38 @@
                     <h2>Daftar Peserta Didik Baru</h2>
                   </div>
                 </div>
+                <?php
+                foreach ($rb_psb_akun as $row) 
                 
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 appointment_form">
-
-                  <div class="form_section">
-                    <form class="form_contant" action="index.html" style="padding-left: 50px; padding-right:50px; width:100%; display:block;">
+                ?>               
+                             
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 appointment_form"> 
+                  <div class="form_section">                  
+                    <form class="form_contant" action="admin/pendaftaran/tambah_aksi" method="post" style="padding-left: 50px; padding-right:50px; width:100%; display:block;">
                       <div class="row">
                         <div class="field col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                          <label for="ttl">Nama Lengkap</label>
-                          <input class="field_custom" placeholder="Nama Lengkap" type="text" required>
+                          <label for="ttl">Nama Lengkap</label>                                                       
+                          <input class="field_custom" placeholder="Nama Lengkap" name="nama_lengkap" value="<?php echo $row->nama_lengkap ?>" type="text" id="nama_lengkap" readonly>                                                                                             
                         </div>
                         <div class="field col-lg-3 col-md-3 col-sm-3 col-xs-3">
                           <label for="ttl">Tempat/Tanggal Lahir</label>
-                          <input class="field_custom" placeholder="Tempat Lahir" type="text" id="ttl" required>
+                          <input class="field_custom" placeholder="Tempat Lahir" name="tempat_lahir" type="text" id="tempat_lahir" required>
                         </div>
                         <div class="field col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                          <input class="field_custom" placeholder="Tanggal Lahir" type="date" required style="margin-top: 25px;">
+                          <input class="field_custom" placeholder="Tanggal Lahir" name="tanggal_lahir" type="date" required style="margin-top: 25px;">
                         </div>
                       </div>
                       <div class="row">
                         <div class="field col-lg-6 col-md-6 col-sm-6 col-xs-6">
                           <label for="ttl">NISN</label>
-                          <input class="field_custom" placeholder="NISN" type="text" required>
+                          <input class="field_custom" placeholder="NISN" name="no_induk" type="number" required>
                         </div>
-                        <div class="field col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                          <label for="ttl">Jenis Kelamin</label>
-                          <br/>
-                          <div class="form-group" required>
-                            <select class="form-control" style="margin-top: 8px;" id="exampleFormControlSelect1" required>
-                              <option>Laki-laki</option>
-                              <option>Perempuan</option>
+                        <div class="field col-lg-6 col-md-6 col-sm-6 col-xs-6">                          
+                          <label for="ttl">Jenis Kelamin</label>                        
+                          <div class="form-group" required>                          
+                            <select class="form-control" class="field col-lg-8 col-md-8 col-sm-8 col-xs-8" id="exampleFormControlSelect1" required>
+                              <option >Laki-laki</option>
+                              <option >Perempuan</option>
                             </select>
                           </div>
                         </div>
@@ -146,7 +148,7 @@
                       <div class="row">
                         <div class="field col-lg-4 col-md-4 col-sm-4 col-xs-4">
                           <label for="ttl">Nomor Telepon</label>
-                          <input class="field_custom" placeholder="Telepon" type="dropdown" required>
+                          <input class="field_custom" placeholder="Telepon" value="<?php echo $row->no_telpon ?>" type="dropdown" required>
                         </div>
                         <div class="field col-lg-2 col-md-2 col-sm-2 col-xs-2">
                           <label for="ttl">Gol. Darah</label>
@@ -385,19 +387,13 @@
                       <div class="row">
                         <div class="field col-lg-12 col-md-12 col-sm-12 col-xs-12">
                           <label for="ttl">Prestasi Akademik</label>
-                          <textarea class="field_custom" placeholder="1. 
-2.
-3.
-dst" type="text" required></textarea>
+                          <textarea class="field_custom" placeholder="1. 2. 3. dst" type="text" required></textarea>
                         </div>
                       </div>
                       <div class="row">
                         <div class="field col-lg-12 col-md-12 col-sm-12 col-xs-12">
                           <label for="ttl">Prestasi Non-Akademik</label>
-                          <textarea class="field_custom" placeholder="1. 
-2.
-3.
-dst" type="text" required></textarea>
+                          <textarea class="field_custom" placeholder="1. 2. 3. dst" type="text" required></textarea>
                         </div>
                       </div>
                       <br/>
@@ -416,6 +412,7 @@ dst" type="text" required></textarea>
                       </div>
                   </div>
                   </form>
+                  <?php ?>
                 </div>
               </div>
             </div>
