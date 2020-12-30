@@ -10,7 +10,7 @@ class Pendaftaran extends CI_Controller {
     public function index() 
     {        
         // $id = $this->session->userdata['ses_id'];
-        $data['rb_psb_akun'] = $this->pendaftaran_model->tampil_data()->result();
+        $data['rb_psb_akun'] = $this->pendaftaran_model->tampil_data_by_id($this->session->id_psb)->row();
         $this->load->view("admin/pendaftaran", $data);
         // var_dump($data);
     }
@@ -26,19 +26,43 @@ class Pendaftaran extends CI_Controller {
 		$tempat_lahir = $this->input->post('tempat_lahir');
 		$tanggal_lahir = $this->input->post('tanggal_lahir');
 		$no_induk = $this->input->post('no_induk');
-		$nama_panggilan = $this->input->post('nama_panggilan');
+		$anak_ke = $this->input->post('anak_ke');
+        $jumlah_saudara = $this->input->post('jumlah_saudara');
+		$no_telpon = $this->input->post('no_telpon');
+		$golongan_darah = $this->input->post('golongan_darah');
+		$berat_badan = $this->input->post('berat_badan');
+		$tinggi_badan = $this->input->post('tinggi_badan');
+		$sekolah_asal = $this->input->post('sekolah_asal');
+		$alamat_siswa = $this->input->post('alamat_siswa');
+		$alamat_sekolah_asal = $this->input->post('alamat_sekolah_asal');
         
-
+        
 		$data = array(
 			'nama' => $nama,
 			'tempat_lahir' => $tempat_lahir,
 			'tanggal_lahir' => $tanggal_lahir,
             'no_induk' => $no_induk,
-			'nama_panggilan' => $nama_panggilan            
-			);
-		$this->pendaftaran_model->input_data($data,'rb_psb_pendaftaran');
-        redirect('admin/overview');
-        // var_dump($data);
+            'anak_ke' => $anak_ke,
+            'jumlah_saudara' => $jumlah_saudara,
+            'no_telpon' => $no_telpon,
+            'golongan_darah' => $golongan_darah,
+            'berat_badan' => $berat_badan,
+            'tinggi_badan' => $tinggi_badan,
+            'sekolah_asal' => $sekolah_asal,
+            'alamat_siswa' => $alamat_siswa,
+            'alamat_sekolah_asal' => $alamat_sekolah_asal          
+            );
+        
+        if ($data == true) 
+        {
+            $this->pendaftaran_model->input_data($data,'rb_psb_pendaftaran');
+            redirect('admin/overview');
+            // var_dump($data);
+
+        } else {
+            redirect('admin/pendaftaran');
+        }   
+		
     }
 
     public function edit()

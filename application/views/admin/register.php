@@ -49,7 +49,14 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
               <div class="main_heading text_align_center">
                 <h2>Register</h2>
-              </div>        
+              </div>
+                  <?php if (validation_errors())
+                  {?>
+                      <div class="alert alert-danger">
+                          <?php echo validation_errors(); ?>
+                      </div>
+                      <?php
+                  } ?>        
                  <div class="form_section">                   
                     <form class="form_contant" action="<?php echo base_url('admin/login/proses_register'); ?>" method="post" style="padding-left: 50px; padding-right:50px; width:100%; display:block;">
                       <div class="row">
@@ -63,7 +70,7 @@
                         </div>
                         <div class="field col-lg-6 col-md-6 col-sm-6 col-xs-6">
                           <label for="no_telpon">Nomor Telepon</label>
-                          <input class="field_custom" placeholder="Nomor Telepon" name="no_telpon" type="options" required>
+                          <input class="field_custom" placeholder="Nomor Telepon" name="no_telpon" type="number" required>
                         </div>
                       </div>
                       <div class="row">
@@ -71,10 +78,10 @@
                           <label for="password">Kata Sandi</label>
                           <input class="field_custom" placeholder="Kata Sandi" name="password" type="password" required>
                         </div>
-                        <!-- <div class="field col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                          <label for="password">Konfirmasi Kata Sandi</label>
-                          <input class="field_custom" placeholder="Konfirmasi Kata Sandi" name="password" type="password" required>
-                        </div> -->
+                        <div class="field col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                          <label for="konfirmasi_password">Konfirmasi Kata Sandi</label>
+                          <input class="field_custom" placeholder="Konfirmasi Kata Sandi" name="konfirmasi_password" type="password" required>
+                        </div>
                       </div>
                       <div class="center">
                         <button class="btn main_bt">Daftar</button>

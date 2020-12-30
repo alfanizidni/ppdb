@@ -41,6 +41,8 @@
 <?php $this->load->view('admin/_partials/header') ?>
 <!-- End Header -->
 
+
+
 <!-- header bottom -->
 <div class="header_bottom">
     <div class="container">
@@ -70,6 +72,109 @@
   <!-- header bottom end -->
 </header>
 
+<!-- Tabs navs -->
+<div class="section">
+  <div class="container">
+    <div class="row">
+     <div class="center"> 
+      <ul class="nav nav-tabs mb-3" id="ex1" role="tablist" >
+        <li class="nav-item" role="presentation">
+          <a
+            class="nav-link active"
+            id="ex1-tab-1"
+            data-mdb-toggle="tab"
+            href="#ex1-tabs-1"
+            role="tab"
+            aria-controls="ex1-tabs-1"
+            aria-selected="true"
+            >Data Pribadi</a
+          >
+        </li>
+        <li class="nav-item" role="presentation">
+          <a
+            class="nav-link"
+            id="ex1-tab-2"
+            data-mdb-toggle="tab"
+            href="#ex1-tabs-2"
+            role="tab"
+            aria-controls="ex1-tabs-2"
+            aria-selected="false"
+            >Data Orang Tua</a
+          >
+        </li>
+        <li class="nav-item" role="presentation">
+          <a
+            class="nav-link"
+            id="ex1-tab-3"
+            data-mdb-toggle="tab"
+            href="#ex1-tabs-3"
+            role="tab"
+            aria-controls="ex1-tabs-3"
+            aria-selected="false"
+            >Data Nilai</a
+          >
+        </li>
+        <li class="nav-item" role="presentation">
+          <a
+            class="nav-link"
+            id="ex1-tab-4"
+            data-mdb-toggle="tab"
+            href="#ex1-tabs-4"
+            role="tab"
+            aria-controls="ex1-tabs-4"
+            aria-selected="false"
+            >Upload Berkas</a
+          >
+        </li>
+        <li class="nav-item" role="presentation">
+          <a
+            class="nav-link"
+            id="ex1-tab-5"
+            data-mdb-toggle="tab"
+            href="#ex1-tabs-5"
+            role="tab"
+            aria-controls="ex1-tabs-5"
+            aria-selected="false"
+            >Cetak</a
+          >
+        </li>
+        <li class="nav-item" role="presentation">
+          <a
+            class="nav-link"
+            id="ex1-tab-6"
+            data-mdb-toggle="tab"
+            href="#ex1-tabs-6"
+            role="tab"
+            aria-controls="ex1-tabs-6"
+            aria-selected="false"
+            >Pembayaran</a
+          >
+        </li>
+      </ul>
+      <!-- Tabs navs -->
+
+      <!-- Tabs content -->
+      <div class="tab-content" id="ex1-content">
+        <div
+          class="tab-pane fade show active"
+          id="ex1-tabs-1"
+          role="tabpanel"
+          aria-labelledby="ex1-tab-1"
+        >
+        </div>
+        <div class="tab-pane fade" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
+          Tab 2 content
+        </div>
+        <div class="tab-pane fade" id="ex1-tabs-3" role="tabpanel" aria-labelledby="ex1-tab-3">
+          Tab 3 content
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- Tabs content -->
+
 <!-- end inner page banner -->
 <div class="section">
   <div class="container">
@@ -84,26 +189,21 @@
                   <div class="main_heading text_align_center">
                     <h2>Daftar Peserta Didik Baru</h2>
                   </div>
-                </div>
-                <?php
-                foreach ($rb_psb_akun as $row) 
-                
-                ?>               
-                             
+                </div>            
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 appointment_form"> 
                   <div class="form_section">                  
                     <form class="form_contant" action="admin/pendaftaran/tambah_aksi" method="post" style="padding-left: 50px; padding-right:50px; width:100%; display:block;">
                       <div class="row">
                         <div class="field col-lg-6 col-md-6 col-sm-6 col-xs-6">
                           <label for="ttl">Nama Lengkap</label>                                                       
-                          <input class="field_custom" placeholder="Nama Lengkap" name="nama_lengkap" value="<?php echo $row->nama_lengkap ?>" type="text" id="nama_lengkap" readonly>                                                                                             
+                          <input class="field_custom" placeholder="Nama Lengkap" name="nama" value="<?php echo $rb_psb_akun->nama_lengkap ?>" type="text" readonly>                                                                                             
                         </div>
                         <div class="field col-lg-3 col-md-3 col-sm-3 col-xs-3">
                           <label for="ttl">Tempat/Tanggal Lahir</label>
-                          <input class="field_custom" placeholder="Tempat Lahir" name="tempat_lahir" type="text" id="tempat_lahir" required>
+                          <input class="field_custom" placeholder="Tempat Lahir" name="tempat_lahir" type="text" id="tempat_lahir" value="<?php $tempat_lahir; ?>" required>
                         </div>
                         <div class="field col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                          <input class="field_custom" placeholder="Tanggal Lahir" name="tanggal_lahir" type="date" required style="margin-top: 25px;">
+                          <input class="field_custom" placeholder="Tanggal Lahir" name="tanggal_lahir" value="{{ old='tanggal_lahir' }}" type="date" required style="margin-top: 25px;">
                         </div>
                       </div>
                       <div class="row">
@@ -114,7 +214,7 @@
                         <div class="field col-lg-6 col-md-6 col-sm-6 col-xs-6">                          
                           <label for="ttl">Jenis Kelamin</label>                        
                           <div class="form-group" required>                          
-                            <select class="form-control" class="field col-lg-8 col-md-8 col-sm-8 col-xs-8" id="exampleFormControlSelect1" required>
+                            <select class="form-control" name="" class="field col-lg-8 col-md-8 col-sm-8 col-xs-8" id="exampleFormControlSelect1" required>
                               <option >Laki-laki</option>
                               <option >Perempuan</option>
                             </select>
@@ -138,23 +238,23 @@
                         </div>
                         <div class="field col-lg-4 col-md-4 col-sm-4 col-xs-4">
                           <label for="ttl">Anak ke-</label>
-                          <input class="field_custom" placeholder="Anak Ke-" type="number" id="ttl" required>
+                          <input class="field_custom" placeholder="Anak Ke-" name="anak_ke" type="number" id="ttl" required>
                         </div>
                         <div class="field col-lg-4 col-md-4 col-sm-4 col-xs-4">
                           <label for="ttl">Jumlah Saudara</label>
-                          <input class="field_custom" placeholder="Jumlah Saudara" type="text" required>
+                          <input class="field_custom" placeholder="Jumlah Saudara" name="jumlah_saudara" type="text" required>
                         </div>
                       </div>
                       <div class="row">
                         <div class="field col-lg-4 col-md-4 col-sm-4 col-xs-4">
                           <label for="ttl">Nomor Telepon</label>
-                          <input class="field_custom" placeholder="Telepon" value="<?php echo $row->no_telpon ?>" type="dropdown" required>
+                          <input class="field_custom" placeholder="Telepon" name="no_telpon" value="<?php echo $rb_psb_akun->no_telpon ?>" type="dropdown" required>
                         </div>
                         <div class="field col-lg-2 col-md-2 col-sm-2 col-xs-2">
                           <label for="ttl">Gol. Darah</label>
                           <br/>
                           <div class="form-group" required>
-                            <select class="form-control" style="margin-top: 8px;" id="exampleFormControlSelect1" required>
+                            <select class="form-control" style="margin-top: 8px;" name="golongan_darah" id="exampleFormControlSelect1" required>
                               <option>A</option>
                               <option>B</option>
                               <option>O</option>
@@ -165,25 +265,25 @@
                         </div>
                         <div class="field col-lg-3 col-md-3 col-sm-3 col-xs-3">
                           <label for="ttl">Berat Badan</label>
-                          <input class="field_custom" placeholder="... Kg" type="number" id="ttl" required>
+                          <input class="field_custom" placeholder="... Kg" name="berat_badan" type="number" id="ttl" required>
                         </div>
                         <div class="field col-lg-3 col-md-3 col-sm-3 col-xs-3">
                           <label for="ttl">Tinggi Badan</label>
-                          <input class="field_custom" placeholder="... cm" type="number" required>
+                          <input class="field_custom" placeholder="... cm" name="tinggi_badan" type="number" required>
                         </div>
                       </div>
                       <div class="row">
                         <div class="field col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <label for="ttl">Sekolah Asal</label>
-                            <input class="field_custom" placeholder="Sekolah Asal" type="password" required>
+                            <input class="field_custom" placeholder="Sekolah Asal" name="sekolah_asal" type="text" required>
                         </div>
                         <div class="field col-lg-6 col-md-12 col-sm-12 col-xs-12">
                           <label for="ttl">Alamat</label>
-                          <textarea class="field_custom" placeholder="Alamat Lengkap" type="text" ></textarea>
+                          <textarea class="field_custom" placeholder="Alamat Lengkap" name="alamat_siswa" type="text" ></textarea>
                         </div>                        
                         <div class="field col-lg-6 col-md-12 col-sm-12 col-xs-12">
                           <label for="ttl">Alamat Sekolah Asal</label>
-                          <textarea class="field_custom" placeholder="Alamat Sekolah Asal" type="password"></textarea>
+                          <textarea class="field_custom" placeholder="Alamat Sekolah Asal" name="alamat_sekolah_asal" type="text"></textarea>
                         </div>
                       </div>
                       <br/>
@@ -412,7 +512,6 @@
                       </div>
                   </div>
                   </form>
-                  <?php ?>
                 </div>
               </div>
             </div>
