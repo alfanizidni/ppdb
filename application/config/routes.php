@@ -59,3 +59,11 @@ $route['admin'] = 'admin/overview';
 $route['prosedur'] = 'admin/overview/prosedur';
 
 $route['pendaftaran'] = 'admin/pendaftaran';
+$route['pendaftaran-ortu'] = 'admin/pendaftaran/tambah_ortu';
+$route['daftar-nilai'] = 'admin/pendaftaran/daftar_nilai';
+$route['upload-berkas'] = 'admin/pendaftaran/upload_berkas';
+$route['cetak-berkas'] = 'admin/pendaftaran/cetak_berkas';
+$route['pembayaran'] = 'admin/pendaftaran/pembayaran';
+
+
+

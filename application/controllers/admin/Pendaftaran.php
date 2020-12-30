@@ -65,6 +65,34 @@ class Pendaftaran extends CI_Controller {
 		
     }
 
+    public function tambah_ortu()
+    {
+        $this->load->view('admin/pendaftaran_ortu');
+    }
+
+    public function daftar_nilai()
+    {
+        $this->load->view('admin/daftar_nilai');
+    }
+
+    public function upload_berkas()
+    {
+        $this->load->view('admin/upload_berkas');
+    }
+
+    public function cetak_berkas()
+    {
+        $this->load->view('admin/cetak_berkas');
+    }
+
+    public function pembayaran()
+    {
+        $this->load->view('admin/pembayaran');
+    }
+
+
+
+
     public function edit()
     {
         $data['rb_psb_akun'] = $this->pendaftaran_model->tampil_data()->result();
