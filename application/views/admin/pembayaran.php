@@ -231,7 +231,7 @@
                         </div>
                       </div>
                       <div class="row">
-                        <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
                           <label for="ttl">Email</label>
                           <div class="input-group mb-2">
                             <div class="input-group-prepend">
@@ -240,11 +240,11 @@
                             <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Email">
                           </div>
                         </div>
-                        <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                          <label for="ttl">Foto Bukti Administrasi</label>
+                        <div class="form-group col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                          <label for="ttl">Foto Bukti Pembayaran</label>
                           <input class="form-control" placeholder="Unggah Foto" type="text" required>
                         </div>
-                        <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                        <div class="form-group col-lg-1 col-md-1 col-sm-1 col-xs-1">
                           <button type="submit" class="btn sqaure_bt" style="margin-top: 25px;">Unggah Foto</button>
                         </div>
                       </div> 
