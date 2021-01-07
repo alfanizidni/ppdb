@@ -91,12 +91,12 @@
                         <ul class="nav nav-tabs nav-tabs mb-3">
                           <li class="nav-item active"><a data-toggle="tab" href="#siswa" class="nav-link">Data Pribadi</a></li>
                           <li class="nav-item"><a data-toggle="tab" href="#orangtua" class="nav-link">Data Orang Tua</a></li>
+                          <li class="nav-item"><a data-toggle="tab" href="#pembayaran" class="nav-link">Pembayaran </a></li>
                           <li class="nav-item"><a data-toggle="tab" href="#nilai" class="nav-link">Data Nilai </a></li>
                           <li class="nav-item"><a data-toggle="tab" href="#upload_berkas" class="nav-link">Upload Berkas </a></li>
                           <li class="nav-item"><a data-toggle="tab" href="#cetak" class="nav-link">Cetak </a></li>
-                          <li class="nav-item"><a data-toggle="tab" href="#pembayaran" class="nav-link">Pembayaran </a></li>
                         </ul>
-                        </div>
+                        </div> 
                       <br>
 
                       <div class="form_section">                  
@@ -110,15 +110,26 @@
                                     <label for="ttl">Nama Lengkap</label>                                                       
                                     <input class="form-control" placeholder="Nama Lengkap" name="nama" value="<?php echo $rb_psb_akun->nama_lengkap ?>" type="text" readonly>                                                                                             
                                   </div>
-                                  <div class="form-group col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                                    <label for="ttl">Tempat/Tanggal Lahir</label>
-                                    <input class="form-control" placeholder="Tempat Lahir" name="tempat_lahir" type="text" id="tempat_lahir" value="<?php $tempat_lahir; ?>" required>
-                                  </div>
-                                  <div class="form-group col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                                    <input class="form-control" placeholder="Tanggal Lahir" name="tanggal_lahir" value="{{ old='tanggal_lahir' }}" type="date" required style="margin-top: 25px;">
-                                  </div>
+                                  <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <label for="ttl">Nama Panggilan</label>                                                       
+                                    <input class="form-control" placeholder="Nama Panggilan" name="nama_panggilan" type="text">                                                                                             
+                                  </div>                                 
                                 </div>
                                 <div class="row">
+                                  <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <label for="ttl">Email</label>                                                       
+                                    <input class="form-control" placeholder="Nama Lengkap" name="email" value="<?php echo $rb_psb_akun->email ?>" type="text" readonly>                                                                                             
+                                  </div>
+                                  <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <label for="ttl">Nomor Telepon</label>                                                       
+                                    <input class="form-control" placeholder="Nama Lengkap" name="nama" value="<?php echo $rb_psb_akun->no_telpon ?>" type="text" readonly>                                                                                             
+                                  </div>     
+                                </div>
+                                <div class="row">
+                                  <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <label for="ttl">Password</label>                                                       
+                                    <input class="form-control" placeholder="Nama Lengkap" name="pass" value="<?php echo $rb_psb_akun->password ?>" type="text">                                                                                             
+                                  </div>
                                   <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                     <label for="ttl">NISN</label>
                                     <input class="form-control" placeholder="NISN" name="no_induk" type="number" required>
@@ -126,11 +137,18 @@
                                   <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">                          
                                     <label for="ttl">Jenis Kelamin</label>                        
                                     <div class="form-group" required>                          
-                                      <select class="form-control" name="" class="form-group col-lg-8 col-md-8 col-sm-8 col-xs-8" id="exampleFormControlSelect1" required>
-                                        <option >Laki-laki</option>
-                                        <option >Perempuan</option>
+                                      <select class="form-control" name="id_jenis_kelamin" class="form-group col-lg-8 col-md-8 col-sm-8 col-xs-8" id="exampleFormControlSelect1" required>
+                                        <option value="1">Laki-laki</option>
+                                        <option value="2">Perempuan</option>
                                       </select>
                                     </div>
+                                  </div>
+                                  <div class="form-group col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                                    <label for="ttl">Tempat/Tanggal Lahir</label>
+                                    <input class="form-control" placeholder="Tempat Lahir" name="tempat_lahir" type="text" id="tempat_lahir" required>
+                                  </div>
+                                  <div class="form-group col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                                    <input class="form-control" placeholder="Tanggal Lahir" name="tanggal_lahir" type="date" required style="margin-top: 25px;">
                                   </div>
                                 </div>
                                 <div class="row">
@@ -138,13 +156,13 @@
                                     <label for="ttl">Agama</label>
                                     <br/>
                                     <div class="form-group" required>
-                                      <select class="form-control" id="exampleFormControlSelect1" required>
-                                        <option>Islam</option>
-                                        <option>Protestan</option>
-                                        <option>Katolik</option>
-                                        <option>Hindu</option>
-                                        <option>Budha</option>
-                                        <option>Konghucu</option>
+                                      <select class="form-control" name="id_agama" id="exampleFormControlSelect1" required>
+                                        <option value="1">Islam</option>
+                                        <option value="2">Protestan</option>
+                                        <option value="3">Katolik</option>
+                                        <option value="4">Hindu</option>
+                                        <option value="5">Budha</option>
+                                        <option value="6">Konghucu</option>
                                       </select>
                                     </div>
                                   </div>
@@ -154,36 +172,42 @@
                                   </div>
                                   <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-4">
                                     <label for="ttl">Jumlah Saudara</label>
-                                    <input class="form-control" placeholder="Jumlah Saudara" name="jumlah_saudara" type="text" required>
+                                    <input class="form-control" placeholder="Jumlah Saudara" name="jumlah_saudara" type="number" required>
                                   </div>
                                 </div>
                                 <div class="row">
                                   <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                                    <label for="ttl">Nomor Telepon</label>
-                                    <input class="form-control" placeholder="Telepon" name="no_telpon" value="<?php echo $rb_psb_akun->no_telpon ?>" type="dropdown" required>
-                                  </div>
-                                  <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                                    <label for="ttl">Gol. Darah</label>
-                                    <br/>
-                                    <div class="form-group" required>
-                                      <select class="form-control" name="golongan_darah" id="exampleFormControlSelect1" required>
-                                        <option>A</option>
-                                        <option>B</option>
-                                        <option>O</option>
-                                        <option>AB</option>
-                                        <option>-</option>
-                                      </select>
-                                    </div>
-                                  </div>
-                                  <div class="form-group col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                                    <label for="ttl">Status Keluarga</label>
+                                    <input class="form-control" placeholder="Telepon" name="status_dalam_keluarga" value="<?php echo $rb_psb_akun->no_telpon ?>" required>
+                                  </div>                                  
+                                  <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-4">
                                     <label for="ttl">Berat Badan</label>
                                     <input class="form-control" placeholder="... Kg" name="berat_badan" type="number" id="ttl" required>
                                   </div>
-                                  <div class="form-group col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                                  <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-4">
                                     <label for="ttl">Tinggi Badan</label>
                                     <input class="form-control" placeholder="... cm" name="tinggi_badan" type="number" required>
                                   </div>
                                 </div>
+                                <div class="row">
+                                <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <label for="ttl">Gol. Darah</label>
+                                    <br/>
+                                    <div class="form-group" required>
+                                      <select class="form-control" name="golongan_darah" id="exampleFormControlSelect1" required>
+                                        <option value="1">A</option>
+                                        <option value="2">B</option>
+                                        <option value="3">O</option>
+                                        <option value="4">AB</option>
+                                        <option value="5">-</option>
+                                      </select>
+                                    </div>
+                                  </div> 
+                                  <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <label for="ttl">Penyakit Pernah Diderita</label>
+                                    <input class="form-control" placeholder="Penyakit yang pernah diderita" name="penyakit_pernah_diderita" type="text" required>
+                                  </div>
+                                </div>                        
                                 <div class="row">
                                   <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                       <label for="ttl">Sekolah Asal</label>
@@ -198,13 +222,27 @@
                                     <textarea class="form-control" placeholder="Alamat Sekolah Asal" name="alamat_sekolah_asal" type="text"></textarea>
                                   </div>
                                 </div>
+                                <br/>
+                                <hr/>
+                                <br/>
+                                <div class="row">
+                                  <div class="form-group col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                    <label for="ttl">Prestasi Akademik</label>
+                                    <textarea class="form-control" placeholder="1. _____________" rows="4" name="prestasi_akademik" type="text" ></textarea>
+                                  </div>
+                                  <div class="form-group col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                    <label for="ttl">Prestasi Non Akademik</label>
+                                    <textarea class="form-control" placeholder="1. _____________" rows="4" name="prestasi_non_akademik" type="text" ></textarea>
+                                  </div>
+                                </div>  
                               </div>
+
                               <!-- TAB CONTENT DATA ORTU -->
                               <div id="orangtua" class="tab-pane fade">
                                 <div class="row">
                                   <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <label for="ttl">Nama Ayah</label>
-                                    <input class="form-control" placeholder="Nama Lengkap Ayah" type="text" required>
+                                    <input class="form-control" placeholder="Nama Lengkap Ayah" type="text" name="nama_ayah" required>
                                   </div>
                                 </div>
                                 <div class="row">
@@ -212,52 +250,52 @@
                                     <label for="ttl">Agama Ayah</label>
                                     <br/>
                                     <div class="form-group" required>
-                                      <select class="form-control" id="exampleFormControlSelect1" required>
-                                        <option>Islam</option>
-                                        <option>Protestan</option>
-                                        <option>Katolik</option>
-                                        <option>Hindu</option>
-                                        <option>Budha</option>
-                                        <option>Konghucu</option>
+                                      <select class="form-control" name="id_agama" id="exampleFormControlSelect1" required>
+                                        <option value="1">Islam</option>
+                                        <option value="2">Protestan</option>
+                                        <option value="3">Katolik</option>
+                                        <option value="4">Hindu</option>
+                                        <option value="5">Budha</option>
+                                        <option value="6">Konghucu</option>
                                       </select>
                                     </div>
                                   </div>
                                   <div class="form-group col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                     <label for="ttl">Tempat/Tanggal Lahir Ayah</label>
-                                    <input class="form-control" placeholder="Tempat Lahir" name="tempat_lahir" type="text" id="tempat_lahir" value="<?php $tempat_lahir; ?>" required>
+                                    <input class="form-control" placeholder="Tempat Lahir" name="tempat_lahir_ayah" type="text" id="tempat_lahir" required>
                                   </div>
                                   <div class="form-group col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                                    <input class="form-control" placeholder="Tanggal Lahir" name="tanggal_lahir" value="{{ old='tanggal_lahir' }}" type="date" required style="margin-top: 25px;">
+                                    <input class="form-control" placeholder="Tanggal Lahir" name="tanggal_lahir_ayah" type="date" required style="margin-top: 25px;">
                                   </div>
                                 </div>
                                 <div class="row">
                                   <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                     <label for="ttl">Pendidikan Ayah</label>
-                                    <input class="form-control" placeholder="Pendidikan Ayah" type="text" required>
+                                    <input class="form-control" placeholder="Pendidikan Ayah" name="pendidikan_ayah" type="text" required>
                                   </div>
                                   <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                     <label for="ttl">Pekerjaan Ayah</label>
-                                    <input class="form-control" placeholder="Pekerjaan Ayah" type="text" id="ttl" required>
+                                    <input class="form-control" placeholder="Pekerjaan Ayah" type="text" name="pekerjaan_ayah" id="ttl" required>
                                   </div>
                                 </div>
                                 <div class="row">                        
                                   <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                     <label for="ttl">Telepon Kantor Ayah</label>
-                                    <input class="form-control" placeholder="Telepon Kantor Ayah" type="number" id="ttl" required>
+                                    <input class="form-control" placeholder="Telepon Kantor Ayah" name="telpon_kantor_ayah" type="number" id="ttl" required>
                                   </div>
                                   <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                     <label for="ttl">Telepon Ayah</label>
-                                    <input class="form-control" placeholder="Nomor Telepon Ayah" type="number" id="ttl" required>
+                                    <input class="form-control" placeholder="Nomor Telepon Ayah" name="telpon_ayah" type="number" id="ttl" required>
                                   </div>
                                 </div>
                                 <div class="row">
                                   <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                       <label for="ttl">Alamat Rumah Ayah</label>
-                                      <textarea class="form-control" rows="4" placeholder="Alamat Lengkap" type="text" required></textarea>
+                                      <textarea class="form-control" rows="4" placeholder="Alamat Lengkap" name="alamat_rumah_ayah" type="text" required></textarea>
                                   </div>
                                   <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                     <label for="ttl">Alamat Kantor Ayah</label>
-                                    <textarea class="form-control" rows="4" placeholder="Alamat Lengkap" type="text" required></textarea>
+                                    <textarea class="form-control" rows="4" placeholder="Alamat Lengkap" name="alamat_kantor_ayah" type="text" required></textarea>
                                   </div>                        
                                 </div>
                                 <br/>
@@ -266,7 +304,7 @@
                                 <div class="row">
                                   <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <label for="ttl">Nama Ibu</label>
-                                    <input class="form-control" placeholder="Nama Lengkap Ibu" type="text" required>
+                                    <input class="form-control" placeholder="Nama Lengkap Ibu" name="nama_ibu" type="text" required>
                                   </div>
                                 </div>
                                 <div class="row">
@@ -274,52 +312,52 @@
                                     <label for="ttl">Agama Ibu</label>
                                     <br/>
                                     <div class="form-group" required>
-                                      <select class="form-control" id="exampleFormControlSelect1" required>
-                                        <option>Islam</option>
-                                        <option>Protestan</option>
-                                        <option>Katolik</option>
-                                        <option>Hindu</option>
-                                        <option>Budha</option>
-                                        <option>Konghucu</option>
+                                      <select class="form-control" name="agama_ibu" id="exampleFormControlSelect1" required>
+                                        <option value="1">Islam</option>
+                                        <option value="2">Protestan</option>
+                                        <option value="3">Katolik</option>
+                                        <option value="4">Hindu</option>
+                                        <option value="5">Budha</option>
+                                        <option value="6">Konghucu</option>
                                       </select>
                                     </div>
                                   </div>
                                   <div class="form-group col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                     <label for="ttl">Tempat/Tanggal Lahir Ibu</label>
-                                    <input class="form-control" placeholder="Tempat Lahir" type="text" id="ttl" required>
+                                    <input class="form-control" placeholder="Tempat Lahir" name="tempat_lahir_ibu" type="text" id="ttl" required>
                                   </div>
                                   <div class="form-group col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                                    <input class="form-control" placeholder="Tanggal Lahir" type="date" required style="margin-top: 25px;">
-                                  </div>
+                                    <input class="form-control" placeholder="Tanggal Lahir" name="tanggal_lahir_ibu" type="date" required style="margin-top: 25px;">
+                                  </div>                                
                                 </div>
                                 <div class="row">
                                   <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                     <label for="ttl">Pendidikan Ibu</label>
-                                    <input class="form-control" placeholder="Pendidikan Ibu" type="text" required>
+                                    <input class="form-control" placeholder="Pendidikan Ibu" name="pendidikan_ibu" type="text" required>
                                   </div>
                                   <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                     <label for="ttl">Pekerjaan Ibu</label>
-                                    <input class="form-control" placeholder="Pekerjaan Ibu" type="text" id="ttl" required>
+                                    <input class="form-control" placeholder="Pekerjaan Ibu" name="pekerjaan_ibu" type="text" required>
                                   </div>
                                 </div>
                                 <div class="row">                        
                                   <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                     <label for="ttl">Telepon Kantor Ibu</label>
-                                    <input class="form-control" placeholder="Telepon Kantor Ibu" type="number" id="ttl" required>
+                                    <input class="form-control" placeholder="Telepon Kantor Ibu" name="telpon_kantor_ibu" type="number" required>
                                   </div>
                                   <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                     <label for="ttl">Telepon Ibu</label>
-                                    <input class="form-control" placeholder="Nomor Telepon Ibu" type="number" id="ttl" required>
+                                    <input class="form-control" placeholder="Nomor Telepon Ibu" name="telpon_rumah_ibu" type="number" required>
                                   </div>
                                 </div>
                                 <div class="row">
                                   <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                       <label for="ttl">Alamat Rumah Ibu</label>
-                                      <textarea class="form-control" rows="4" placeholder="Alamat Lengkap" type="text" required></textarea>
+                                      <textarea class="form-control" rows="4" placeholder="Alamat Lengkap" name="alamat_rumah_ibu" type="text" required></textarea>
                                   </div>
                                   <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                     <label for="ttl">Alamat Kantor Ibu</label>
-                                    <textarea class="form-control" rows="4" placeholder="Alamat Lengkap" type="text" required></textarea>
+                                    <textarea class="form-control" rows="4" placeholder="Alamat Lengkap" name="alamat_kantor_ibu" type="text" required></textarea>
                                   </div>                        
                                 </div>
                                 <br/>
@@ -328,7 +366,7 @@
                                 <div class="row">
                                   <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <label for="ttl">Nama Wali</label>
-                                    <input class="form-control" placeholder="Nama Lengkap Wali" type="text" required>
+                                    <input class="form-control" placeholder="Nama Lengkap Wali" name="nama_wali" type="text" required>
                                   </div>
                                 </div>
                                 <div class="row">
@@ -337,7 +375,7 @@
                                     <br/>
                                     <div class="form-group" required>
                                       <select class="form-control" style="margin-top: 8px;" id="exampleFormControlSelect1" required>
-                                        <option>Islam</option>
+                                        <option>Islam</option>  
                                         <option>Protestan</option>
                                         <option>Katolik</option>
                                         <option>Hindu</option>
@@ -371,28 +409,19 @@
                                   </div>
                                   <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                     <label for="ttl">Telepon Wali</label>
-                                    <input class="form-control" placeholder="Nomor Telepon Wali" type="number" id="ttl" required>
+                                    <input class="form-control" placeholder="Nomor Telepon Wali" name="no_telpon_wali" type="number" id="ttl" required>
                                   </div>
                                 </div>
                                 <div class="row">
                                   <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                       <label for="ttl">Alamat Rumah Wali</label>
-                                      <textarea class="form-control" rows="4" placeholder="Alamat Lengkap" type="text" required></textarea>
+                                      <textarea class="form-control" rows="4" placeholder="Alamat Lengkap" name="alamat_wali" type="text" required></textarea>
                                   </div>
                                   <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                     <label for="ttl">Alamat Kantor Wali</label>
                                     <textarea class="form-control" rows="4" placeholder="Alamat Lengkap" type="text" required></textarea>
                                   </div>                        
                                 </div>
-                              </div>
-                              <!-- TAB CONTENT DATA NILAI --> 
-                              <div id="nilai" class="tab-pane fade">
-                              </div>
-                              <!-- TAB CONTENT DATA UPLOAD BERKAS -->
-                              <div id="upload_berkas" class="tab-pane fade">
-                              </div>
-                              <!-- TAB CONTENT DATA CETAK -->
-                              <div id="cetak" class="tab-pane fade">
                               </div>
                               <!-- TAB CONTENT DATA PEMBAYARAN -->
                               <div id="pembayaran" class="tab-pane fade">
@@ -403,7 +432,7 @@
                                   </div>
                                   <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-4">
                                     <label for="ttl">Status Seleksi</label>
-                                    <input class="form-control" placeholder="Proses.." name="anak_ke" type="number" id="ttl" readonly required>
+                                    <input class="form-control" placeholder="Proses.." name="anak_ke" type="number" required>
                                   </div>
                                   <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-4">
                                     <label for="ttl">Beban Biaya</label>
@@ -418,19 +447,19 @@
                                 <div class="row">
                                   <div class="form-group col-lg-3 col-md-3 col-sm-3 col-xs-3 ">
                                       <label for="ttl">Dusun</label>
-                                      <input class="form-control" placeholder="Waktu Daftar" type="text" required>
+                                      <input class="form-control" placeholder="Dusun" type="text" required>
                                   </div>
                                   <div class="form-group col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                       <label for="ttl">Kelurahan</label>
-                                      <input class="form-control" placeholder="Proses.." name="anak_ke" type="number" id="ttl"required>
+                                      <input class="form-control" placeholder="Kelurahan" name="kelurahan" type="text" required>
                                   </div>
                                   <div class="form-group col-lg-3 col-md-3 col-sm-3 col-xs-3 ">
                                       <label for="ttl">Kecamatan</label>
-                                      <input class="form-control" placeholder="Waktu Daftar" type="text" required>
+                                      <input class="form-control" placeholder="Kecamatan" type="text" required>
                                   </div>
                                   <div class="form-group col-lg-3 col-md-3 col-sm-3 col-xs-3 ">
                                       <label for="ttl">Kode Pos</label>
-                                      <input class="form-control" placeholder="Waktu Daftar" type="text" required>
+                                      <input class="form-control" placeholder="Kode Pos" type="number" required>
                                   </div>
                                 </div>
                                 <div class="row">
@@ -440,7 +469,7 @@
                                     <div class="input-group-prepend">
                                       <div class="input-group-text">@</div>
                                         </div>
-                                        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Email">
+                                        <input type="email" class="form-control" id="inlineFormInputGroup" placeholder="Email">
                                     </div>
                                   </div>
                                   <div class="form-group col-lg-3 col-md-3 col-sm-3 col-xs-3">
@@ -458,7 +487,17 @@
                                     </div>
                                   </div>
                                 </div>
+                              </div>                              
+                              <!-- TAB CONTENT DATA NILAI --> 
+                              <div id="nilai" class="tab-pane fade">
                               </div>
+                              <!-- TAB CONTENT DATA UPLOAD BERKAS -->
+                              <div id="upload_berkas" class="tab-pane fade">
+                              </div>
+                              <!-- TAB CONTENT DATA CETAK -->
+                              <div id="cetak" class="tab-pane fade">
+                              </div>
+                             
 
                               <div class="row form-group">
                                 <div class="form-check">
@@ -473,6 +512,9 @@
                               <div class="center">
                                 <button class="btn main_bt">Daftar</button>
                               </div>
+                              <!-- <div id="orangtua" class="tab" >
+                                <button class="btn main_bt">Selanjutnya</button>
+                              </div> -->
           
                             </div>
                           </form>

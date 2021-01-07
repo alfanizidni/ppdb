@@ -6,11 +6,10 @@ class Pendaftaran_model extends CI_Model{
    function input_data($data)
    {
        $this->db->insert($data);
-       var_dump($data);
-    //    $this->db->from('rb_psb_pendaftaran');
-    //    $this->db->join('rb_psb_akun', 'rb_psb_akun.id_psb_akun = rb_psb_pendaftaran.id_psb_akun');
-    //    $query = $this->db->get();
-    //    return $query->result();
+       $this->db->from('rb_psb_pendaftaran');
+       $this->db->join('rb_psb_akun', 'rb_psb_akun.id_psb_akun = rb_psb_pendaftaran.id_psb_akun');
+       $query = $this->db->get();
+       return $query->result();
    }
 
    function tampil_data()
